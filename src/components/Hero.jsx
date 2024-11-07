@@ -30,10 +30,13 @@ export default function Hero() {
                         </Button>
                     </div>
                     {/* socials */}
-                    <Socials />
+                    <Socials containerStyles='flex gap-x-6 mx-auto xl:mx-0' iconStyles="text-foreground text-[22px] hover:text-primary transition-all" />
                 </div>
                 {/* image */}
-                <div className="hidden xl:flex relative">Image</div>
+                <div className="hidden xl:flex relative">
+                    <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2"> </div>
+                    <DevImg />
+                </div>
             </div>
             {/* icon */}
             <div className="hidden md:flex absolute left-2/4 bottom-44 xl:bottom-12 animate-bounce">
