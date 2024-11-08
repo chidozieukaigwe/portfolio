@@ -1,7 +1,9 @@
-import React from 'react'
+import Image from 'next/image'
 
-export default function DevImg() {
+export default function DevImg({containerStyles, imgsrc}) {
   return (
-    <div>DevImg</div>
+    <div className={`${containerStyles}`}>
+      <Image src={imgsrc} fill priority alt="Chido Ukaigwe's Developer Image" />
+    </div>
   )
 }
