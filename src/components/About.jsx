@@ -1,7 +1,7 @@
 import Image from "next/image"
 import DevImg from "./DevImg"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs"
-import { User2, MailIcon, PhoneCall, Briefcase } from "lucide-react"
+import { User2, MailIcon, PhoneCall, Briefcase, PenToolIcon } from "lucide-react"
 
 const infoData = [
     {
@@ -153,13 +153,14 @@ export default function About() {
                                             </h3>
                                             {/* experience & education wrapper */}
                                             <div>
-                                                {/* experience */}
+                                                
                                                 <div>
                                                    <div className="flex gap-x-4 items-center text-[22px] text-primary">
-                                                    <Briefcase/>
-                                                    <h4 className="capitalize font-medium py-4">
-                                                        {getData(skillsData, 'Technical Skills').title}
-                                                    </h4>
+                                                    <PenToolIcon/>
+                                                    <h3 className="capitalize font-medium py-4">
+                                                        What I Use Everyday
+                                                        {/* {getData(skillsData, 'Technical Skills').title} */}
+                                                    </h3>
                                                    </div>
                                                    {/* list */}
                                                    <div className="flex flex-col gap-y-8">
