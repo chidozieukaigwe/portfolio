@@ -16,9 +16,9 @@ export default function Hero() {
             <div className="flex justify-between gap-x-8">
                 {/* text */}
                 <div className="flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
-                    <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">Web Developer</div>
+                    <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">Full Stack Developer</div>
                     <h1 className="h1 mb-4">Hello, my name is Chido Ukaigwe</h1>
-                    <p className="subtitle max-w-[490px] mx-auto xl:mx-0">Brief description with insights into myself, my vocational journey, and what I engage in professionally</p>
+                    <p className="subtitle max-w-[490px] mx-auto xl:mx-0">I am a highly motivated, self-starting, results oriented full stack developer; with a passion for crafting innovative, user-centric websites, single page applications and RESTful API’s</p>
                     {/* buttons */}
                     <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
                         <Link href="/contact">
@@ -26,9 +26,12 @@ export default function Hero() {
                                 Contact me <Send size={18} />
                             </Button>
                         </Link>
+                        <Link href="/cv/chido-ukaigwe-full-stack-developer-cv.pdf" download target="_blank">
                         <Button className="gap-x-2" variant="secondary">
                             Download CV <Download size={18} />
                         </Button>
+                        </Link>
+                     
                     </div>
                     {/* socials */}
                     <Socials containerStyles='flex gap-x-6 mx-auto xl:mx-0' iconStyles="text-foreground text-[22px] hover:text-primary transition-all" />

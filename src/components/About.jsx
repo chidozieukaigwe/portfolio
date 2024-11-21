@@ -5,10 +5,6 @@ import { User2, MailIcon, PhoneCall, Briefcase, PenToolIcon } from "lucide-react
 
 const infoData = [
     {
-        icon: <User2 size={20} />,
-        text: "Chido Ukaigwe",
-    },
-    {
         icon: <PhoneCall size={20} />,
         text: "07534420485",
     },
@@ -74,8 +70,12 @@ export default function About() {
 
     return (
         <section className="xl:h-[860px] pb-12 xl:py-24">
-            <div className="container mx-auto pt-20 px-10">
-                <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto pt-20">About Me</h2>
+            <div className="container mx-auto pt-10 px-10">
+                <h2 className="section-title mb-8 text-center mx-auto pt-20">About Me</h2>
+                <p className="subtitle text-center mx-auto  mb-8 xl:mb-16 "> </p>
+
+               
+
                 <div className="flex flex-col xl:flex-row">
                     {/* image */}
                     <div className="hidden xl:flex flex-1 relative">
@@ -83,7 +83,7 @@ export default function About() {
                     </div>
                     {/* tabs */}
                     <div className="flex-1">
-                        <Tabs>
+                        <Tabs defaultValue="personal">
                             <TabsList className="w-full grid xl:grid-cols-3 xl:max-w-[520] xl:border dark:border-none">
                                 <TabsTrigger className="w-[162px] xl:w-auto" value="personal">Personal Info</TabsTrigger>
                                 <TabsTrigger className="w-[162px] xl:w-auto" value="experience">Experience</TabsTrigger>
