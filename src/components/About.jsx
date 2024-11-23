@@ -73,7 +73,7 @@ export default function About() {
     }
 
     return (
-        <section className="xl:h-[900px] pb-12 xl:py-24 xl:mb-20">
+        <section className="xl:h-[900px] pb-12 py-24 xl:mb-20">
             <div className="container mx-auto py-10 px-10">
                 <h2 className="section-title mb-8 text-center mx-auto pt-20">About Me</h2>
                 <p className="subtitle text-center mx-auto  mb-8 xl:mb-16 "> </p>
