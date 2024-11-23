@@ -14,8 +14,8 @@ export default function Contact() {
               <span className="w-[30px] h-[2px] bg-primary"></span>
               <div>Say Hello 👋 </div>
             </div>
-            <h1 className="h1 max-w-md mb-8">Let's Work Together</h1>
-            <p className="subtitle max-w-[400px]">Want to discuss a project, ask a question, or simply connect? Feel free to reach out. I'm always open to new opportunities and collaborations.</p>
+            <h1 className="h1 max-w-md mb-8">Let&apos;s Work Together</h1>
+            <p className="subtitle max-w-[400px]">Want to discuss a project, ask a question, or simply connect? Feel free to reach out. I&apos;m always open to new opportunities and collaborations.</p>
           </div>
           {/* illustration */}
           <div>
