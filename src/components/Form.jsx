@@ -5,12 +5,15 @@ import { Button } from "./ui/button"
 import { Input } from "./ui/input"
 import { Textarea } from "./ui/textarea"
 import { useState } from "react"
+import { sendContactForm } from "@/lib/sendContactForm"
 
 
 export default function Form() {
 
     const [formData, setFormData] = useState(null)
+    const [success, setSuccess] = useState(false)
     const [loading, setLoading] = useState(false)
+    const [error, setError] = useState(false)
 
     const handleChange = (e) => {
         setFormData({
@@ -20,25 +23,39 @@ export default function Form() {
     }
 
     const handleSubmit = async (e) => {
-        e.preventDefault()
-        if (!formData.name || !formData.email || !formData.message){
-            return
-        }
-        setLoading(true)
-        console.log("Loading")
-        console.log(formData)
-        setTimeout(() => {
+
+        try {
+            e.preventDefault()
+            setError(null)
+            setLoading(true)
+
+            if (!formData.name || !formData.email || !formData.message){
+                return
+            }
+           await sendContactForm(formData)
             setLoading(false)
-            console.log('finshed Loading')
-        }, 2000);
+            setSuccess(true)
+            
+        } catch (error) {
+            console.error(error)
+            setLoading(false)
+            setError(true)
+            
+            
+        }
+ 
+    }
 
-        setFormData(formData)
+    if (success) {
+        return <p>Message sent successfully!</p>  // Show success message after form submission
+    }
 
-         
+    if (error) {
+        return <p>Error sending message. Please try again later.</p> 
     }
 
     if (loading){
-        return <p>Loading...</p>  // Show loading state while submitting the form
+        return <p>Sending Message...</p>  // Show loading state while submitting the form
     }
 
     if (!loading){
